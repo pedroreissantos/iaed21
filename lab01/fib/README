@@ -1,0 +1,14 @@
+time python fibrec.py 12
+time python fibrec.py 25
+time python fibrec.py 35
+time java -jar fibrec 12
+time java -jar fibrec 25
+time java -jar fibrec 35
+time java -jar fibrec 42
+time ./fibrec 12
+time ./fibrec 25
+time ./fibrec 35
+time ./fibrec 42
+time python fibiter.py 42
+time java -jar fibiter 42
+time ./fibiter 42
