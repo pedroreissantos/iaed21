@@ -123,10 +123,10 @@ Para comparar o desempenho das diversas linguagens vamos utilizar o comando
 aplicação a executar (`user time`).
 Primeiro, utilizando a versão recursiva para calcular a série de *fibonacci*
 vamos calcular o elemento 35 da série em python e em C:
-    ```
-    $ time python fibrec.py 35
-    $ time ./fibrec 35
-    ```
+```
+$ time python fibrec.py 35
+$ time ./fibrec 35
+```
 Note que os tempos de execução vão diminuindo consoante a linguagem vai sendo
 menos interpretada e mais compilada.
 Caso os tempos sejam muito próximos de zero, pode utilizar termos maiores
