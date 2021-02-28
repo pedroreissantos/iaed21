@@ -24,8 +24,10 @@
     `$ ./a.out`
 
     6. O executável pode ser nomeado durante a compilação com a opção `-o`:
-    `$ gcc -ansi -pedantic -Wall -Wextra -Werror -o hello hello.c`
-    `$ ./hello`
+    ```
+    $ gcc -ansi -pedantic -Wall -Wextra -Werror -o hello hello.c
+    $ ./hello
+    ```
 
 2. **Compilação e ligação de múltiplos ficheiros**:
     1. Mude para o directório `fact/` (`cd fact`) visualize os ficheiros `main.c`, `fact.h`, `iter.c` e `recurs.c` com um editor de texto, e observe:
