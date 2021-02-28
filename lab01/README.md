@@ -24,10 +24,8 @@
     `$ ./a.out`
 
     6. O executável pode ser nomeado durante a compilação com a opção `-o`:
-        ```
-	$ gcc -ansi -pedantic -Wall -Wextra -Werror -o hello hello.c
-	$ ./hello
-	```
+    `$ gcc -ansi -pedantic -Wall -Wextra -Werror -o hello hello.c`
+    `$ ./hello`
 
 2. **Compilação e ligação de múltiplos ficheiros**:
     1. Mude para o directório `fact/` (`cd fact`) visualize os ficheiros `main.c`, `fact.h`, `iter.c` e `recurs.c` com um editor de texto, e observe:
@@ -113,30 +111,30 @@
 
 5. **Comparação de linguagens e algoritmos**
     1. Mude para o directório `fib/` (`cd ../fib`) e compile o ficheiro `fibrec.c` com o comando: 
-```
-	$ gcc -o fibrec -O3 fibrec.c
-```
-A opção `-O3` indica que o compilador de C deve gerar código de boa qualidade,
-mesmo gastando um pouco mais de tempo, embora o resultado não possa ser depurado *debug*.
-Para comparar o desempenho das diversas linguagens vamos utilizar o comando
-`time` existente nos sistemas `unix` para determinar o tempo gasto pela
-aplicação a executar (`user time`).
-Primeiro, utilizando a versão recursiva para calcular a série de *fibonacci*
-vamos calcular o elemento 35 da série em python e em C:
-```
-$ time python fibrec.py 35
-$ time ./fibrec 35
-```
-Note que os tempos de execução vão diminuindo consoante a linguagem vai sendo
-menos interpretada e mais compilada.
-Caso os tempos sejam muito próximos de zero, pode utilizar termos maiores
-da série, desde que inferiores a 46.
-Para tornar a execução mais rápida é necessário dispor de um algoritmo mais eficiente.
-Neste caso, existe uma versão recursiva, significativamente mais rápida.
-Repetindo o processo para os ficheiros `fibiter` nas três linguagens,
-pode-se verificar que os tempos são significativamente melhores.
-Na realidade as outras linguagens ficam quase ao nível da versão recursiva em C,
-embora mais lentos que a mesma versão em C.
-Com uma versão tão eficiente é possível calcular termos da série superiores a
-46 (até 92) desde que os inteiros de 32-bits sejam substituídos por inteiros
-de 64-bits (long) com mais capacidade, tal como presente no ficheiro `fiblong.c`.
+    ```
+    $ gcc -o fibrec -O3 fibrec.c
+    ```
+    A opção `-O3` indica que o compilador de C deve gerar código de boa qualidade,
+    mesmo gastando um pouco mais de tempo, embora o resultado não possa ser depurado *debug*.
+    Para comparar o desempenho das diversas linguagens vamos utilizar o comando
+    `time` existente nos sistemas `unix` para determinar o tempo gasto pela
+    aplicação a executar (`user time`).
+    Primeiro, utilizando a versão recursiva para calcular a série de *fibonacci*
+    vamos calcular o elemento 35 da série em python e em C:
+    ```
+    $ time python fibrec.py 35
+    $ time ./fibrec 35
+    ```
+    Note que os tempos de execução vão diminuindo consoante a linguagem vai sendo
+    menos interpretada e mais compilada.
+    Caso os tempos sejam muito próximos de zero, pode utilizar termos maiores
+    da série, desde que inferiores a 46.
+    Para tornar a execução mais rápida é necessário dispor de um algoritmo mais eficiente.
+    Neste caso, existe uma versão recursiva, significativamente mais rápida.
+    Repetindo o processo para os ficheiros `fibiter` nas três linguagens,
+    pode-se verificar que os tempos são significativamente melhores.
+    Na realidade as outras linguagens ficam quase ao nível da versão recursiva em C,
+    embora mais lentos que a mesma versão em C.
+    Com uma versão tão eficiente é possível calcular termos da série superiores a
+    46 (até 92) desde que os inteiros de 32-bits sejam substituídos por inteiros
+    de 64-bits (long) com mais capacidade, tal como presente no ficheiro `fiblong.c`.
