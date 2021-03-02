@@ -43,18 +43,17 @@
     4. Repita os passos 2 e 3 utilizando a versão recursiva.
 
 3. **Passos intermédios do processo de compilação**:
-    1. Regresse ao directório principal `cd ..`
-    2. Pré-processamento: fase que antecede a compilação e que executa as directivas iniciadas por #. Por exemplo, no ficheiro `main.c` serão processadas as directivas `include` e `define`.
+    1. Pré-processamento: fase que antecede a compilação e que executa as directivas iniciadas por #. Por exemplo, no ficheiro `main.c` serão processadas as directivas `include` e `define`.
     ```
     $ gcc -E main.c
     ```
     O resultado do pré-processamento é enviado para o terminal. (O pré processador pode ser invocado separadamente com o comando `cpp`)
-    3. *Compilação*: fase que gera código final em assembly. O assembly ainda tem um formato textual, pode ser lido e modificado por um vulgar editor de texto, mas o código gerado já depende do processador, arquitectura e sistema operativo. 
+    2. *Compilação*: fase que gera código final em assembly. O assembly ainda tem um formato textual, pode ser lido e modificado por um vulgar editor de texto, mas o código gerado já depende do processador, arquitectura e sistema operativo. 
     ```
     $ gcc -S iter.c
     ```
      Verifique o código assembly gerado no ficheiro `iter.s`. Compare as variantes do ficheiro `iter.s` quando utiliza o optimizador (adicionar a opção `-O`) e a informação para o debugger (adicionar a opção `-g`).
-    4. *Montagem ou assemblagem*: fase que produz os códigos binários, ficheiros objecto (".o", nada tem a ver com linguagens orientada para objectos), que serão processados pelo CPU. Esta fase é independente da linguagem de alto nível utilizada: C, Pascal, Fortran, etc. 
+    3. *Montagem ou assemblagem*: fase que produz os códigos binários, ficheiros objecto (".o", nada tem a ver com linguagens orientada para objectos), que serão processados pelo CPU. Esta fase é independente da linguagem de alto nível utilizada: C, Pascal, Fortran, etc. 
     ```
     $ gcc -c main.c
     ```
@@ -71,7 +70,7 @@
     ```
     $ nm main.o
     ```
-    5. *Ligação ou Linkagem*: fase que produz o ficheiro executável final através da interligação dos vários ficheiros objectos ou de bibliotecas (conjuntos de ficheiros objecto). 
+    4. *Ligação ou Linkagem*: fase que produz o ficheiro executável final através da interligação dos vários ficheiros objectos ou de bibliotecas (conjuntos de ficheiros objecto). 
     ```
     $ gcc -o factorial main.o iter.s
     ```
@@ -84,12 +83,12 @@
     $ gcc main.c
     ```
      falta um ficheiro ou biblioteca que forneça uma realização de factorial.
-    6. O processo completo (*executável estático vs dinâmico*): o comando `gcc` permite, como já pode observar, controlar todo o processo de compilação para a linguagem C. Contudo, pode verificar a execução das diversas fases através da opção `-v`. 
+    5. O processo completo (*executável estático vs dinâmico*): o comando `gcc` permite, como já pode observar, controlar todo o processo de compilação para a linguagem C. Contudo, pode verificar a execução das diversas fases através da opção `-v`. 
     ```
     $ gcc -v -static main.c iter.c
     ```
      Neste exemplo, geramos um executável estático, isto é, não depende na execução da existência das bibliotecas dinâmicas. Como contrapartida, o executável final fica muito maior, pois inclui no próprio ficheiro uma cópia de todas as funções utilizadas, como por exemplo o `printf`. Verifique o tipo, dimensões do ficheiro ( `ls -l`), dimensões das secções e dependências do ficheiro `a.out` gerado, face ao executável dinâmico gerado na alínea anterior. Retire a informação simbólica, com o comando `strip`, e verifique que o executável ficou mais pequeno e que já não é possível saber a posição dos símbolos (comando `nm`).
-    7. Inspeccione o exemplo de ficheiro `Makefile` com um editor de texto que cria os dois executáveis através do comando *make*:
+    6. Inspeccione o exemplo de ficheiro `Makefile` com um editor de texto que cria os dois executáveis através do comando *make*:
     ```
     $ make clean
     $ make
