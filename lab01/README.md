@@ -1,6 +1,7 @@
 ### Exercícios
 
 1.  **Olá mundo!**:
+
     1. Considere o ficheiro `hello.c` seguinte:
     ```
     #include <stdio.h>
@@ -9,27 +10,30 @@
         return 0;
     }
     ```
+
     2. Experimente compilar e correr, escrevendo no terminal:
     ```
     $ gcc -ansi -pedantic -Wall -Wextra -Werror hello.c
     ```
      (A utilização das opções `-ansi -pedantic -Wall -Wextra -Werror` é sempre recomendada no âmbito desta cadeira.)
      Foi criado um ficheiro executável `a.out` com o programa que escreveu.
-    4. Encontre o ficheiro criado listando o directório corrente com o comando: 
+
+    3. Encontre o ficheiro criado listando o directório corrente com o comando: 
 
     `$ ls -l`
 
-    5.  Pode agora executar o programa criado:
+    4.  Pode agora executar o programa criado:
 
     `$ ./a.out`
 
-    6. O executável pode ser nomeado durante a compilação com a opção `-o`:
+    5. O executável pode ser nomeado durante a compilação com a opção `-o`:
     ```
     $ gcc -ansi -pedantic -Wall -Wextra -Werror -o hello hello.c
     $ ./hello
     ```
 
 2. **Compilação e ligação de múltiplos ficheiros**:
+
     1. Mude para o directório `fact/` (`cd fact`) visualize os ficheiros `main.c`, `fact.h`, `iter.c` e `recurs.c` com um editor de texto, e observe:
         - declaração da função main: argumentos e tipo de retorno
         - valores de retorno
@@ -58,6 +62,7 @@
     $ gcc -S iter.c
     ```
      Verifique o código assembly gerado no ficheiro `iter.s`. Compare as variantes do ficheiro `iter.s` quando utiliza o optimizador (adicionar a opção `-O`) e a informação para o debugger (adicionar a opção `-g`).
+
     3. *Montagem ou assemblagem*: fase que produz os códigos binários, ficheiros objecto (".o", nada tem a ver com linguagens orientada para objectos), que serão processados pelo CPU. Esta fase é independente da linguagem de alto nível utilizada: C, Pascal, Fortran, etc. 
     ```
     $ gcc -c main.c
@@ -103,7 +108,7 @@
     ```
 4. **A importância das declarações**
 
-    1. Mude para o directório `decl/` (`cd ../decl`) e compile os dois ficheiros com o comando: 
+    Mude para o directório `decl/` (`cd ../decl`) e compile os dois ficheiros com o comando: 
     ```
     $ gcc -Wall -Wextra -Werror -ansi -pedantic *.c
     ```
