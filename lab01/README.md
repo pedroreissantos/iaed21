@@ -35,19 +35,24 @@
         - valores de retorno
         - função do programa
         - includes e variáveis globais
+
     2. Compile os módulos fonte do programa iterativo (`main.c` e `iter.c`) e faça a ligação do código objecto.
     ```
     $ gcc -ansi -pedantic -Wall -Wextra -Werror -o iter main.c iter.c
     ```
+
     3. Execute o programa `iter` e verifique que este imprime o factorial de 5.
+
     4. Repita os passos 2 e 3 utilizando a versão recursiva.
 
 3. **Passos intermédios do processo de compilação**:
+
     1. Pré-processamento: fase que antecede a compilação e que executa as directivas iniciadas por #. Por exemplo, no ficheiro `main.c` serão processadas as directivas `include` e `define`.
     ```
     $ gcc -E main.c
     ```
     O resultado do pré-processamento é enviado para o terminal. (O pré processador pode ser invocado separadamente com o comando `cpp`)
+
     2. *Compilação*: fase que gera código final em assembly. O assembly ainda tem um formato textual, pode ser lido e modificado por um vulgar editor de texto, mas o código gerado já depende do processador, arquitectura e sistema operativo. 
     ```
     $ gcc -S iter.c
@@ -70,6 +75,7 @@
     ```
     $ nm main.o
     ```
+
     4. *Ligação ou Linkagem*: fase que produz o ficheiro executável final através da interligação dos vários ficheiros objectos ou de bibliotecas (conjuntos de ficheiros objecto). 
     ```
     $ gcc -o factorial main.o iter.s
@@ -83,17 +89,20 @@
     $ gcc main.c
     ```
      falta um ficheiro ou biblioteca que forneça uma realização de factorial.
+
     5. O processo completo (*executável estático vs dinâmico*): o comando `gcc` permite, como já pode observar, controlar todo o processo de compilação para a linguagem C. Contudo, pode verificar a execução das diversas fases através da opção `-v`. 
     ```
     $ gcc -v -static main.c iter.c
     ```
      Neste exemplo, geramos um executável estático, isto é, não depende na execução da existência das bibliotecas dinâmicas. Como contrapartida, o executável final fica muito maior, pois inclui no próprio ficheiro uma cópia de todas as funções utilizadas, como por exemplo o `printf`. Verifique o tipo, dimensões do ficheiro ( `ls -l`), dimensões das secções e dependências do ficheiro `a.out` gerado, face ao executável dinâmico gerado na alínea anterior. Retire a informação simbólica, com o comando `strip`, e verifique que o executável ficou mais pequeno e que já não é possível saber a posição dos símbolos (comando `nm`).
+
     6. Inspeccione o exemplo de ficheiro `Makefile` com um editor de texto que cria os dois executáveis através do comando *make*:
     ```
     $ make clean
     $ make
     ```
 4. **A importância das declarações**
+
     1. Mude para o directório `decl/` (`cd ../decl`) e compile os dois ficheiros com o comando: 
     ```
     $ gcc -Wall -Wextra -Werror -ansi -pedantic *.c
@@ -111,7 +120,7 @@
     Podemos compilar e executar o resultado.
 
 5. **Comparação de linguagens e algoritmos**
-    1. Mude para o directório `fib/` (`cd ../fib`) e compile o ficheiro `fibrec.c` com o comando: 
+    Mude para o directório `fib/` (`cd ../fib`) e compile o ficheiro `fibrec.c` com o comando: 
     ```
     $ gcc -o fibrec -O3 fibrec.c
     ```
