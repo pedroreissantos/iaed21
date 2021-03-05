@@ -1,4 +1,4 @@
-*Nota prévia:* para testar os seus programas pode usar as sequências disponibilizadas na directoria de `test/`. Os ficheiros `.in` contêm as sequências de entrada e os respetivos ficheiros `.out` a saída esperada para um programa correto.
+**Nota prévia:** para testar os seus programas pode usar as sequências disponibilizadas na directoria de `tests/`. Os ficheiros `.in` contêm as sequências de entrada e os respetivos ficheiros `.out` a saída esperada para um programa correto.
 O processo pode ser automatizado com recurso à `Makefile` aí existente, para tal os programas devem ter o nome do exercício (`ex01.c` para o primeiro exercício).O comando `make -C tests ex01` compila e executa os testes disponíveis para o exercício `ex01`.
 Para testar todos os exercícios basta executar `make -C tests` (ou apenas `make` se estiver na diretoria `tests/`). Os ficheiros __C__ devem ser desenvolvidos no diretório do laboratório (não na diretoria de `tests/`).
 ---
