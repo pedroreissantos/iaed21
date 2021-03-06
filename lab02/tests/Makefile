@@ -26,6 +26,7 @@ all:: clean # run regression tests
 
 %: ../%.c
 	$(LINK.c) -o $@ $<
+	@rm -f $*_*.diff
 	@for i in $($@:%=$@_%.diff); do $(MAKE) $(MFLAGS) EXE=./$@ $$i; done
 
 .in.diff:
