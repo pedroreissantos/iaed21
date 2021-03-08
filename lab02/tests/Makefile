@@ -2,6 +2,7 @@
 .SUFFIXES: .in .out .diff
 MAKEFLAGS += --no-print-directory # No entering and leaving messages
 OK="\e[1;32mtest $< PASSED\e[0m"
+KO="\e[1;31mtest $< FAILED\e[0m"
 CC=gcc
 CFLAGS=-g -Wall -Wextra -Werror -ansi -pedantic
 ALL=ex01 ex02 ex03 ex04 ex05 ex06 ex07 ex08 ex09 ex10 ex11 ex12 ex13 ex14 ex15
@@ -30,8 +31,8 @@ all:: clean # run regression tests
 	@for i in $($@:%=$@_%.diff); do $(MAKE) $(MFLAGS) EXE=./$@ $$i; done
 
 .in.diff:
-	@$(EXE) < $< | diff - $*.out > $@
-	@if [ `wc -l < $@` -eq 0 ]; then echo $(OK); fi;
+	@-$(EXE) < $< | diff - $*.out > $@
+	@if [ `wc -l < $@` -eq 0 ]; then echo $(OK); else echo $(KO); fi;
 
 clean::
 	rm -f *.diff ex??
