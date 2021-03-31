@@ -5,6 +5,7 @@
 ## LOG alterações
 
 - 26mar21 - Publicação do enunciado.
+- 30mar21 - adicionada a mensagem `invalid duration`.
 
 ## 1. Introdução
 
@@ -123,6 +124,7 @@ do que um erro, deverá ser indicado apenas o primeiro.
     * Erros:
         * `too many tasks` no caso de a tarefa, se criada, exceder o limite máximo de tarefas permitidas pelo sistema.
         * `duplicate description` no caso de já existir uma tarefa com o mesmo nome.
+        * `invalid duration` no caso de a duração não ser um número positivo.
 
   * __l__ - lista as tarefas:
     * Formato de entrada: `l [<id> <id> ...]`
