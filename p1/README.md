@@ -6,6 +6,7 @@
 
 - 26mar21 - Publicação do enunciado.
 - 30mar21 - adicionada a mensagem `invalid duration`.
+- 7abr21 - Mooshak aberto para submissões.
 
 ## 1. Introdução
 
@@ -212,11 +213,11 @@ Para testar o seu programa poderá executar os passos indicados acima ou usar o 
 
 A entrega do projecto deverá respeitar o procedimento seguinte:
 
-* Na página da disciplina aceda ao sistema para entrega de projectos. O sistema será activado uma semana antes da data limite de entrega. As instruções acerca da forma de acesso ao sistema serão oportunamente fornecidas.
+* Na página da disciplina aceda ao sistema para entrega de projectos. O sistema será activado uma semana antes da data limite de entrega. A entrega do 1º projecto é feita unica e exclusivamente usando o sistema Mooshak. Não serão aceites quaisquer outras formas de submissão.
 
-* Efectue o upload de um ficheiro de arquivo com extensão `.zip` que inclua todos os ficheiros fonte que constituem o programa.
-  * Se o seu código tiver apenas um ficheiro o zip conterá apenas esse ficheiro.
-  * Se o seu código estiver estruturado em vários ficheiros (`.c` e `.h`) não se esqueça de os juntar também ao pacote.
+* Efectue o upload de um ficheiro de arquivo com extensão `.zip` que inclua todos os ficheiros fonte que constituem o programa, sem diretorias.
+  * Se o seu código tiver apenas um ficheiro, o zip conterá apenas esse ficheiro.
+  * Se o seu código estiver estruturado em vários ficheiros (`.c` e `.h`), não se esqueça de os juntar também ao pacote.
 
 * Para criar um ficheiro arquivo com a extensão `.zip` deve executar o seguinte comando __na directoria onde se encontram os ficheiros__ com extensão `.c` e `.h` (se for o caso), criados durante o desenvolvimento do projecto:
 
@@ -226,7 +227,7 @@ A entrega do projecto deverá respeitar o procedimento seguinte:
 
 * Como resultado do processo de upload será informado se a resolução entregue apresenta a resposta esperada num conjunto de casos de teste.
 
-* O sistema não permite submissões com menos de 10 minutos de intervalo para o mesmo aluno. Tenha especial atenção a este facto na altura da submissão final. Exemplos de casos de teste serão oportunamente fornecidos.
+* O sistema não permite submissões com menos de 10 minutos de intervalo para o mesmo aluno. Tenha especial atenção a este facto na altura da submissão final. Exemplos de casos de teste serão oportunamente fornecidos. O tempo de avalição do projeto é inferior a 3 minutos.
 
 * Data limite de entrega do projecto: __16 de Abril de 2021, às 19h59m__. Até à data limite poderá efectuar o número de submissões que desejar, sendo utilizada para efeitos de avaliação a última submissão efectuada. Deverá portanto verificar cuidadosamente que a última submissão corresponde à versão do projecto que pretende que seja avaliada. Não existirão excepções a esta regra.
 
