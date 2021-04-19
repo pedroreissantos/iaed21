@@ -2,10 +2,6 @@
 
 ## Ex 1
 
-Considere o exercício anterior, mas onde os argumentos da função `partition` são os seguintes: `v =<20, 11, 16, 9, 12, 14, 17, 19, 13, 15>`, `left = 0` , `right = 9`. Qual o conteúdo do vector `v` após a execução do procedimento `partition`?
-
-## Ex 2
-
 Diga quais dos seguintes vectores corresponde a um amontoado (heap)?
 
 - `<50, 25, 30, 27, 24, 21, 28>`
@@ -14,18 +10,18 @@ Diga quais dos seguintes vectores corresponde a um amontoado (heap)?
 - `<40, 15, 18, 13, 11, 14, 16>`
 - `<60, 30, 80, 10, 35, 70, 40>`
 
-## Ex 3
+## Ex 2
 
 A primeira operação do algoritmo heapsort é transformar o vector num amontoado. Considere que o vector de entrada do algoritmo é `<20, 11, 16, 9, 12, 14, 17, 19, 13, 15>`.
 
 - Indique o conteúdo do vector após o passo de transformação num amontoado.
 - Indique o conteúdo do vector após os dois maiores elementos terem sido ordenados (colocados na sua posição final), durante a operação de ordenação (heapsort).
 
-## Ex 4
+## Ex 3
 
 Qual o conteúdo do seguinte vector `<25, 19, 23, 15, 18, 16, 21, 12>` depois de os dois primeiros elementos (i.e. os dois maiores) terem sido ordenados, utilizando o algoritmo de ordenação heapsort?
 
-## Ex 5
+## Ex 4
 
 - (Radix LSD) Considere a aplicação do algoritmo radix sort LSD, em que cada passo os elementos são ordenados considerando um dígito, ao seguinte vector:
 
@@ -33,7 +29,7 @@ Qual o conteúdo do seguinte vector `<25, 19, 23, 15, 18, 16, 21, 12>` depois de
 
 Qual é o terceiro número da sequência, após o algoritmo ter considerado três digitos?
 
-## Ex 6
+## Ex 5
 
 - (Radix MSD) Considere o seguinte vector de números inteiros sem sinal de 6 bits:
 
