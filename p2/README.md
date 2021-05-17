@@ -5,6 +5,7 @@
 ## LOG alterações
 
 - 7mai21 - Publicação do enunciado.
+- 17mai21 - Atualização teste 09.
 
 ## 1. Introdução
 
