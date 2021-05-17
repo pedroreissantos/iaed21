@@ -5,6 +5,8 @@
 ## LOG alterações
 
 - 7mai21 - Publicação do enunciado.
+- 17mai21 - Não é permitida a utilização do __sqort__. Atualizados os testes 09 e 10. As procuras são pré-order. Está aberto o mooshak.
+ 
 
 ## 1. Introdução
 
